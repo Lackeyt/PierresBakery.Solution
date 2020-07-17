@@ -18,15 +18,15 @@ namespace PierresBakery.Models
       Pastry newPastry = new Pastry(Console.ReadLine());
       while (!newPastry.IsPastryOrderValid())
       {
-        Console.WriteLine("-invalid inpud- Please enter a whole number of pastries ($2 each, three for $5) to order:");
+        Console.WriteLine("-invalid input- Please enter a whole number of pastries ($2 each, three for $5) to order:");
         newPastry.PastryOrderString = Console.ReadLine();
       }
       newBread.BreadCostCalc();
       newPastry.PastryCostCalc();
       int total = (newBread.BreadCost + newPastry.PastryCost);
-      Console.WriteLine($"Your bread loaves cost ${newBread.BreadCost}");
-      Console.WriteLine($"Your pastries cost ${newPastry.PastryCost}");
-      Console.WriteLine($"Your order total is ${total}");
+      Console.WriteLine($"Cost of bread loaves: ${newBread.BreadCost}");
+      Console.WriteLine($"Cost of pastries: ${newPastry.PastryCost}");
+      Console.WriteLine($"Order Total: ${total}");
       Console.WriteLine("Would you like to make another order? (Y/N)");
       string newOrder = Console.ReadLine();
       if (newOrder == "Y")
