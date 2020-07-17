@@ -16,11 +16,12 @@ namespace PierresBakery.Models
       PastryCost = 0;
     }
 
-    // public bool IsPastryOrderValid()
-    // {
-    //   bool isInt = int.TryParse(PastryOrderString, out PastryOrderInt);
-    //   return isInt;
-    // }
+    public bool IsPastryOrderValid()
+    {
+      // bool isInt = int.TryParse(PastryOrderString, out PastryOrderInt);
+      // return isInt;
+      return false;
+    }
 
     // public void PastryCostCalc()
     // {

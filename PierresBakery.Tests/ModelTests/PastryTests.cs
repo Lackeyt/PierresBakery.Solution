@@ -16,12 +16,12 @@ namespace PierresBakery.Tests
       Assert.AreEqual(typeof(Pastry), newPastryOrder.GetType());
     }
 
-    // [TestMethod]
-    // public void IsPastryOrderValid_ReturnsTrueForValidIntegerPastryOrder_True()
-    // {
-    //   Pastry newPastryOrder = new Pastry("5");
-    //   Assert.AreEqual(true, newPastryOrder.IsPastryOrderValid());
-    // }
+    [TestMethod]
+    public void IsPastryOrderValid_ReturnsTrueForValidIntegerPastryOrder_True()
+    {
+      Pastry newPastryOrder = new Pastry("5");
+      Assert.AreEqual(true, newPastryOrder.IsPastryOrderValid());
+    }
 
     // [TestMethod]
     // public void IsPastryOrderValid_ReturnsFalseForInvalidIntegerPastryOrder_False()
