@@ -8,10 +8,20 @@ namespace PierresBakery.Models
     public string BreadOrderString { get; set; }
     public int BreadCost { get; set; }
 
-    public Bread()
+    public Bread(string UserBreadOrder)
     {
-      // BreadOrderString = UserBreadOrder;
-      // BreadCost = 0;
+      BreadOrderString = UserBreadOrder;
+      BreadCost = 0;
+    }
+
+    public bool IsBreadOrderValid()
+    {
+      return false;
+    }
+
+    public void BreadCostCalc()
+    {
+
     }
   }
 }

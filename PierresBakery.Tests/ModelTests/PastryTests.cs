@@ -14,11 +14,11 @@ namespace PierresBakery.Tests
     //   Item.ClearAll();
     // }
 
-    [TestMethod]
-    public void ItemConstructor_CreatesInstanceOfItem_Item()
-    {
-      // Item newItem = new Item("test");
-      // Assert.AreEqual(typeof(Item), newItem.GetType());
-    }
+    // [TestMethod]
+    // public void ItemConstructor_CreatesInstanceOfItem_Item()
+    // {
+    //   // Item newItem = new Item("test");
+    //   // Assert.AreEqual(typeof(Item), newItem.GetType());
+    // }
   }
 }
