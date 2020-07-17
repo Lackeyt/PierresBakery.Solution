@@ -25,7 +25,7 @@
 | Each pastry costs 2 | "2" | "4" |
 | Every 3rd pastry costs 1 | "3" | "5" |
 | Every 12th pastry, total pastry cost reduced by 2 | "12" | "18" |
-| total cost is equal to cost of bread + cost of pastries | input | output |
+| total cost is equal to cost of bread + cost of pastries | BreadCost: "10" PastryCost: "20" | Total Cost: "30" |
 
 
 ## Setup/Installation Requirements
