@@ -6,19 +6,46 @@ using System;
 namespace PierresBakery.Tests
 {
   [TestClass]
-  public class PastryTests //: IDisposable
+  public class PastryTests
   {
 
-    // public void Dispose()
+    [TestMethod]
+    public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
+    {
+      Pastry newPastryOrder = new Pastry("test");
+      Assert.AreEqual(typeof(Pastry), newPastryOrder.GetType());
+    }
+
+    // [TestMethod]
+    // public void IsPastryOrderValid_ReturnsTrueForValidIntegerPastryOrder_True()
     // {
-    //   Item.ClearAll();
+    //   Pastry newPastryOrder = new Pastry("5");
+    //   Assert.AreEqual(true, newPastryOrder.IsPastryOrderValid());
     // }
 
     // [TestMethod]
-    // public void ItemConstructor_CreatesInstanceOfItem_Item()
+    // public void IsPastryOrderValid_ReturnsFalseForInvalidIntegerPastryOrder_False()
     // {
-    //   // Item newItem = new Item("test");
-    //   // Assert.AreEqual(typeof(Item), newItem.GetType());
+    //   Pastry newPastryOrder = new Pastry("Five");
+    //   Assert.AreEqual(false, newPastryOrder.IsPastryOrderValid());
+    // }
+
+    // [TestMethod]
+    // public void PastryCostCalc_EachPastryCosts5_10()
+    // {
+    //   Pastry newPastryOrder = new Pastry("2");
+    //   newPastryOrder.IsPastryOrderValid();
+    //   newPastryOrder.PastryCostCalc();
+    //   Assert.AreEqual(10, newPastryOrder.PastryCost);
+    // }
+
+    // [TestMethod]
+    // public void PastryCostCalc_EveryThirdPastryCosts0_10()
+    // {
+    //   Pastry newPastryOrder = new Pastry("3");
+    //   newPastryOrder.IsPastryOrderValid();
+    //   newPastryOrder.PastryCostCalc();
+    //   Assert.AreEqual(10, newPastryOrder.PastryCost);
     // }
   }
 }
