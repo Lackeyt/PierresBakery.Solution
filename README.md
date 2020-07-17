@@ -20,7 +20,7 @@
 | Sourdough bread costs 8 | "sourdough" | 8 |
 | Baguettes costs 3 | "baguette" | 3 |
 | Italian bread costs 7 | "italian" | 7 |
-| Every 3rd bread costs 0 | "3" | "10" |
+| Every 3rd bread costs 0 | "white" "3" | "10" |
 | Every 21st bread, total bread cost reduced by 2 x bread cost | "white" "21" | "60" |
 | Each pastry costs 2 | "2" | "4" |
 | Every 3rd pastry costs 1 | "3" | "5" |
@@ -65,6 +65,10 @@
 * Visual Studio Code
 * C#
 * .NET core
+
+## Resources
+
+* https://www.dotnetperls.com/console-color  -Console styling
 
 ### License
 
