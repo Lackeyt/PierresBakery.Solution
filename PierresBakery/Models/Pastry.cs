@@ -24,14 +24,19 @@ namespace PierresBakery.Models
       int count = 1;
       while(count <= PastryOrderInt)
       {
-        if (count % 3 != 0)
+        if (count % 12 == 0)
         {
-          PastryCost += 2;
+          PastryCost -= 1;
+          count += 1;
+        }
+        else if (count % 3 == 0)
+        {
+          PastryCost += 1;
           count += 1;
         }
         else
         {
-          PastryCost += 1;
+          PastryCost += 2;
           count += 1;
         }
       }
