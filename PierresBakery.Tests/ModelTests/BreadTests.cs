@@ -44,5 +44,14 @@ namespace PierresBakery.Tests
       newBreadOrder.BreadCostCalc();
       Assert.AreEqual(10, newBreadOrder.BreadCost);
     }
+
+    [TestMethod]
+    public void BreadCostCalc_Every21stBreadReduceCostBy10_60()
+    {
+      Bread newBreadOrder = new Bread("21");
+      newBreadOrder.IsBreadOrderValid();
+      newBreadOrder.BreadCostCalc();
+      Assert.AreEqual(60, newBreadOrder.BreadCost);
+    }
   }
 }
