@@ -18,9 +18,8 @@ namespace PierresBakery.Models
 
     public bool IsPastryOrderValid()
     {
-      // bool isInt = int.TryParse(PastryOrderString, out PastryOrderInt);
-      // return isInt;
-      return false;
+      bool isInt = int.TryParse(PastryOrderString, out PastryOrderInt);
+      return isInt;
     }
 
     // public void PastryCostCalc()
