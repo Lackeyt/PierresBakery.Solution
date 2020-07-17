@@ -16,10 +16,15 @@
 | ----------- | ----------- | ----------- |
 | non-integer inputs for bread will return an error | "one" | "Please enter a whole number for your bread order" |
 | non-integer inputs for pastry will return an error | "two" | "Please enter a whole number for your pastry order" |
-| Each bread costs 5 | "2" | "10" |
+| White bread costs 5 | "white" | 5 |
+| Sourdough bread costs 8 | "sourdough" | 8 |
+| Baguettes costs 3 | "baguette" | 3 |
+| Italian bread costs 7 | "italian" | 7 |
 | Every 3rd bread costs 0 | "3" | "10" |
+| Every 21st bread, total bread cost reduced by 2 x bread cost | "white" "21" | "60" |
 | Each pastry costs 2 | "2" | "4" |
 | Every 3rd pastry costs 1 | "3" | "5" |
+| Every 12th pastry, total pastry cost reduced by 2 | "12" | "18" |
 | total cost is equal to cost of bread + cost of pastries | input | output |
 
 

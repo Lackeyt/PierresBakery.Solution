@@ -1,21 +1,25 @@
+using System.Collections.Generic;
+
 namespace PierresBakery.Models
 {
   public class Bread
   {
-    public string BreadOrderString { get; set; }
+    private Dictionary<string, int> _breadPrice = new Dictionary<string, int> { {"white", 5}, {"sourdough", 8}, {"baguette", 3}, {"italian", 7} }
+    public string BreadOrderNumberString { get; set; }
+    public string BreadType { get; set; }
     public int BreadOrderInt;
     public int BreadCost { get; set; }
 
     public Bread(string UserBreadOrder)
     {
-      BreadOrderString = UserBreadOrder;
+      BreadOrderNumberString = UserBreadOrder;
       BreadOrderInt = 0;
       BreadCost = 0;
     }
 
     public bool IsBreadOrderValid()
     {
-      bool isInt = int.TryParse(BreadOrderString, out BreadOrderInt);
+      bool isInt = int.TryParse(BreadOrderNumberString, out BreadOrderInt);
       return isInt;
     }
 
