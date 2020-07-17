@@ -6,7 +6,7 @@ namespace PierresBakery.Models
   {
     static void Main()
     {
-      Console.BackgroundColor = ConsoleColor.Blue;
+      Console.BackgroundColor = ConsoleColor.DarkBlue;
       Console.ForegroundColor = ConsoleColor.Black;
       string title = "Welcome to Pierre's Bakery";
       Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (title.Length / 2)) + "}", title).PadRight(Console.WindowWidth));
@@ -24,7 +24,7 @@ namespace PierresBakery.Models
         Console.WriteLine("-invalid input- Please enter a whole number of bread loafs ($5 each) to order (Buy 2 get your 3rd free, or buy 21 and two of them will be free):");
         newBread.BreadOrderNumberString = Console.ReadLine();
       }
-      Console.WriteLine("How many pastries ($2 each, three for $5) would you like? ");
+      Console.WriteLine("How many pastries ($2 each, three for $5, 12 for $18) would you like? ");
       Pastry newPastry = new Pastry(Console.ReadLine());
       while (!newPastry.IsPastryOrderValid())
       {
@@ -34,9 +34,12 @@ namespace PierresBakery.Models
       newBread.BreadCostCalc();
       newPastry.PastryCostCalc();
       int total = (newBread.BreadCost + newPastry.PastryCost);
-      Console.WriteLine($"Cost of {newBread.BreadType} loaves: ${newBread.BreadCost}");
-      Console.WriteLine($"Cost of pastries: ${newPastry.PastryCost}");
-      Console.WriteLine($"Order Total: ${total}");
+      Console.ForegroundColor = ConsoleColor.White;
+      Console.WriteLine("Your Order Details:");
+      Console.WriteLine($"{newBread.BreadType} loaves: ${newBread.BreadCost}");
+      Console.WriteLine($"Pastries: ${newPastry.PastryCost}");
+      Console.WriteLine($"Total: ${total}");
+      Console.ForegroundColor = ConsoleColor.Black;
       Console.WriteLine("Would you like to make another order? (Y/N)");
       string newOrder = Console.ReadLine();
       if (newOrder == "Y")
@@ -45,6 +48,7 @@ namespace PierresBakery.Models
       }
       else
       {
+        Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine("Thank you for visiting Pierre's Bakery! Have a nice day.");
       }
       Console.ResetColor();
