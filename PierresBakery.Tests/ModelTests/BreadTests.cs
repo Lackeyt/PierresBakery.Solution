@@ -9,29 +9,29 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      Bread newBreadOrder = new Bread("5");
+      Bread newBreadOrder = new Bread("test", "5");
       Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
     }
 
     [TestMethod]
     public void IsBreadOrderValid_ReturnsTrueForValidIntegerBreadOrder_True()
     {
-      Bread newBreadOrder = new Bread("5");
-      Assert.AreEqual(true, newBreadOrder.IsBreadOrderValid());
+      Bread newBreadOrder = new Bread("test", "5");
+      Assert.AreEqual(true, newBreadOrder.IsBreadOrderNumberValid());
     }
 
     [TestMethod]
     public void IsBreadOrderValid_ReturnsFalseForInvalidIntegerBreadOrder_False()
     {
-      Bread newBreadOrder = new Bread("Five");
-      Assert.AreEqual(false, newBreadOrder.IsBreadOrderValid());
+      Bread newBreadOrder = new Bread("test", "Five");
+      Assert.AreEqual(false, newBreadOrder.IsBreadOrderNumberValid());
     }
 
     [TestMethod]
     public void BreadCostCalc_EachBreadCosts5_10()
     {
-      Bread newBreadOrder = new Bread("2");
-      newBreadOrder.IsBreadOrderValid();
+      Bread newBreadOrder = new Bread("test", "2");
+      newBreadOrder.IsBreadOrderNumberValid();
       newBreadOrder.BreadCostCalc();
       Assert.AreEqual(10, newBreadOrder.BreadCost);
     }
@@ -39,8 +39,8 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void BreadCostCalc_EveryThirdBreadCosts0_10()
     {
-      Bread newBreadOrder = new Bread("3");
-      newBreadOrder.IsBreadOrderValid();
+      Bread newBreadOrder = new Bread("test", "3");
+      newBreadOrder.IsBreadOrderNumberValid();
       newBreadOrder.BreadCostCalc();
       Assert.AreEqual(10, newBreadOrder.BreadCost);
     }
@@ -48,10 +48,19 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void BreadCostCalc_Every21stBreadReduceCostBy10_60()
     {
-      Bread newBreadOrder = new Bread("21");
-      newBreadOrder.IsBreadOrderValid();
+      Bread newBreadOrder = new Bread("test", "21");
+      newBreadOrder.IsBreadOrderNumberValid();
       newBreadOrder.BreadCostCalc();
       Assert.AreEqual(60, newBreadOrder.BreadCost);
     }
+
+    // [TestMethod]
+    // public void BreadCostCalc_Every21stBreadReduceCostBy10_60()
+    // {
+    //   Bread newBreadOrder = new Bread("test", "21");
+    //   newBreadOrder.IsBreadOrderNumberValid();
+    //   newBreadOrder.BreadCostCalc();
+    //   Assert.AreEqual(60, newBreadOrder.BreadCost);
+    // }
   }
 }

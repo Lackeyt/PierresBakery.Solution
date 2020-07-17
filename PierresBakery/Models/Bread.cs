@@ -4,20 +4,21 @@ namespace PierresBakery.Models
 {
   public class Bread
   {
-    private Dictionary<string, int> _breadPrice = new Dictionary<string, int> { {"white", 5}, {"sourdough", 8}, {"baguette", 3}, {"italian", 7} }
+    private Dictionary<string, int> _breadPrice = new Dictionary<string, int> { {"white", 5}, {"sourdough", 8}, {"baguette", 3}, {"italian", 7} };
     public string BreadOrderNumberString { get; set; }
     public string BreadType { get; set; }
     public int BreadOrderInt;
     public int BreadCost { get; set; }
 
-    public Bread(string UserBreadOrder)
+    public Bread(string breadType, string UserBreadOrder)
     {
       BreadOrderNumberString = UserBreadOrder;
+      BreadType = breadType;
       BreadOrderInt = 0;
       BreadCost = 0;
     }
 
-    public bool IsBreadOrderValid()
+    public bool IsBreadOrderNumberValid()
     {
       bool isInt = int.TryParse(BreadOrderNumberString, out BreadOrderInt);
       return isInt;
