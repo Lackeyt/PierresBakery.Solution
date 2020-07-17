@@ -24,7 +24,19 @@ namespace PierresBakery.Models
 
     public void BreadCostCalc()
     {
-      BreadCost += BreadOrderInt * 5;
+      int count = 1;
+      while(count <= BreadOrderInt)
+      {
+        if (count % 3 != 0)
+        {
+          BreadCost += 5;
+          count += 1;
+        }
+        else
+        {
+          count += 1;
+        }
+      }
     }
   }
 }
