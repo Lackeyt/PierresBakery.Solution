@@ -37,5 +37,14 @@ namespace PierresBakery.Tests
       newBreadOrder.BreadCostCalc();
       Assert.AreEqual(10, newBreadOrder.BreadCost);
     }
+
+    [TestMethod]
+    public void BreadCostCalc_EveryThirdBreadCosts0_10()
+    {
+      Bread newBreadOrder = new Bread("3");
+      newBreadOrder.IsBreadOrderValid();
+      newBreadOrder.BreadCostCalc();
+      Assert.AreEqual(10, newBreadOrder.BreadCost);
+    }
   }
 }
