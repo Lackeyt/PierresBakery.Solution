@@ -21,6 +21,13 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
+    public void IsBreadTypeValid_IsSourdoughBreadValid_True()
+    {
+      Bread newBreadOrder = new Bread("sourdough", "test");
+      Assert.AreEqual(true, newBreadOrder.isBreadTypeValid());
+    }
+
+    [TestMethod]
     public void IsBreadOrderValid_ReturnsTrueForValidIntegerBreadOrder_True()
     {
       Bread newBreadOrder = new Bread("test", "5");
