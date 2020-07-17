@@ -22,6 +22,13 @@ namespace PierresBakery.Tests
       Assert.AreEqual(true, newBreadOrder.IsBreadOrderValid());
     }
 
+    [TestMethod]
+    public void IsBreadOrderValid_ReturnsFalseForInvalidIntegerBreadOrder_False()
+    {
+      Bread newBreadOrder = new Bread("Five");
+      Assert.AreEqual(false, newBreadOrder.IsBreadOrderValid());
+    }
+
     // [TestMethod]
     // public void BreadCostCalc_EachBreadCosts5_10()
     // {
