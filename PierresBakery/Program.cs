@@ -35,10 +35,10 @@ namespace PierresBakery.Models
       newPastry.PastryCostCalc();
       int total = (newBread.BreadCost + newPastry.PastryCost);
       Console.ForegroundColor = ConsoleColor.White;
-      Console.WriteLine("Your Order Details:");
-      Console.WriteLine($"{newBread.BreadType} loaves: ${newBread.BreadCost}");
-      Console.WriteLine($"Pastries: ${newPastry.PastryCost}");
-      Console.WriteLine($"Total: ${total}");
+      Console.WriteLine("   Your Order Details:");
+      Console.WriteLine($"   {newBread.BreadType} loaves: ${newBread.BreadCost}");
+      Console.WriteLine($"   Pastries: ${newPastry.PastryCost}");
+      Console.WriteLine($"   Total: ${total}");
       Console.ForegroundColor = ConsoleColor.Black;
       Console.WriteLine("Would you like to make another order? (Y/N)");
       string newOrder = Console.ReadLine();
