@@ -90,6 +90,15 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
+    public void BreadCostCalc_EachItalianBreadCosts7_14()
+    {
+      Bread newBreadOrder = new Bread("italian", "2");
+      newBreadOrder.IsBreadOrderNumberValid();
+      newBreadOrder.BreadCostCalc();
+      Assert.AreEqual(14, newBreadOrder.BreadCost);
+    }
+
+    [TestMethod]
     public void BreadCostCalc_EveryThirdBreadCosts0_10()
     {
       Bread newBreadOrder = new Bread("white", "3");
