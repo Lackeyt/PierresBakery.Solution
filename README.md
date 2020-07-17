@@ -8,7 +8,7 @@
 
 ## Description
 
-_{detailed desc}_
+> Welcome to Pierre's Bakery! In your console, you will be able to place an order for a number of bread loaves and/or pastries. The program will apply discounts for bulk purchases based on the behaviors listed below and return the subtotals for bread and pastry costs along with the total order cost.
 
 ## Behaviors
 
@@ -21,7 +21,7 @@ _{detailed desc}_
 | Each pastry costs 2 | "2" | "4" |
 | Every 3rd pastry costs 1 | "3" | "5" |
 | total cost is equal to cost of bread + cost of pastries | input | output |
-| Behavior | input | output |
+
 
 ## Setup/Installation Requirements
 
@@ -37,7 +37,7 @@ _{detailed desc}_
 ##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open via Bash/GitBash:
 
 1. Clone this repository onto your computer:
-    "git clone https://github.com/Lackeyt/PierresBakery.Solution/tree/master/PierresBakery.Tests"
+    "git clone https://github.com/Lackeyt/PierresBakery.Solution"
 2. Navigate into the "PierresBakery.Solution" directory in Visual Studio Code or preferred text editor:
 3. Open the project
     "code ."
@@ -60,10 +60,6 @@ _{detailed desc}_
 * Visual Studio Code
 * C#
 * .NET core
-
-## Resources:
-
-* 
 
 ### License
 

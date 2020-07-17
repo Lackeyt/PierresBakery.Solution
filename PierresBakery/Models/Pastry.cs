@@ -5,7 +5,6 @@ namespace PierresBakery.Models
     public string PastryOrderString { get; set; }
     public int PastryOrderInt;
     public int PastryCost { get; set; }
-    public string PastryErrorOutput { get; set; }
 
     public Pastry(string UserPastryOrder)
     {

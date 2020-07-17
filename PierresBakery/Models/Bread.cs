@@ -6,8 +6,6 @@ namespace PierresBakery.Models
     public int BreadOrderInt;
     public int BreadCost { get; set; }
 
-    public string BreadErrorOutput { get; set; }
-
     public Bread(string UserBreadOrder)
     {
       BreadOrderString = UserBreadOrder;
