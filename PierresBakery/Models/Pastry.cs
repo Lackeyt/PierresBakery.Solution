@@ -24,20 +24,20 @@ namespace PierresBakery.Models
 
     public void PastryCostCalc()
     {
-      PastryCost = PastryOrderInt * 2;
-      // int count = 1;
-      // while(count <= PastryOrderInt)
-      // {
-      //   if (count % 3 != 0)
-      //   {
-      //     PastryCost += 5;
-      //     count += 1;
-      //   }
-      //   else
-      //   {
-      //     count += 1;
-      //   }
-      // }
+      int count = 1;
+      while(count <= PastryOrderInt)
+      {
+        if (count % 3 != 0)
+        {
+          PastryCost += 2;
+          count += 1;
+        }
+        else
+        {
+          PastryCost += 1;
+          count += 1;
+        }
+      }
     }
   }
 }
