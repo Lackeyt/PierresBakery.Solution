@@ -14,12 +14,13 @@ _{detailed desc}_
 
 | Spec| Example input | Example Output
 | ----------- | ----------- | ----------- |
-| Behavior | input | output |
-| Behavior | input | output |
-| Behavior | input | output |
-| Behavior | input | output |
-| Behavior | input | output |
-| Behavior | input | output |
+| non-integer inputs for bread will return an error | "one" | "Please enter a whole number for your bread order" |
+| non-integer inputs for pastry will return an error | "two" | "Please enter a whole number for your pastry order" |
+| Each bread costs 5 | input | output |
+| Every 3rd bread costs 0 | input | output |
+| Each pastry costs 2 | input | output |
+| Every 3rd pastry costs 1 | input | output |
+| total cost is equal to cost of bread + cost of pastries | input | output |
 | Behavior | input | output |
 
 ## Setup/Installation Requirements
