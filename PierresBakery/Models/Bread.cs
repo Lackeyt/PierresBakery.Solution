@@ -28,6 +28,8 @@ namespace PierresBakery.Models
           return true;
         case "baguette":
           return true;
+        case "italian":
+          return true;
         default:
           return false;
       }
