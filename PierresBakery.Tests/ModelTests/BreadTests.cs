@@ -29,12 +29,12 @@ namespace PierresBakery.Tests
       Assert.AreEqual(false, newBreadOrder.IsBreadOrderValid());
     }
 
-    // [TestMethod]
-    // public void BreadCostCalc_EachBreadCosts5_10()
-    // {
-    //   Bread newBreadOrder = new Bread("2");
-    //   newBreadOrder.BreadCostCalc();
-    //   Assert.AreEqual(10, newBreadOrder.BreadCost);
-    // }
+    [TestMethod]
+    public void BreadCostCalc_EachBreadCosts5_10()
+    {
+      Bread newBreadOrder = new Bread("2");
+      newBreadOrder.BreadCostCalc();
+      Assert.AreEqual(10, newBreadOrder.BreadCost);
+    }
   }
 }
