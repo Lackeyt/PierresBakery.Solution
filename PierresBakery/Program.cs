@@ -11,6 +11,11 @@ namespace PierresBakery.Models
       string breadType = Console.ReadLine();
       Console.WriteLine("How many loaves of bread ($5 each) would you like? (Buy 2 get your 3rd free)");
       Bread newBread = new Bread(breadType, Console.ReadLine());
+      while (!newBread.isBreadTypeValid())
+      {
+        Console.WriteLine("-invalid input- Please choose a valid bread type (white, sourdough, baguette, italian)");
+        newBread.BreadType = Console.ReadLine();
+      }
       while (!newBread.IsBreadOrderNumberValid())
       {
         Console.WriteLine("-invalid input- Please enter a whole number of bread loafs ($5 each) to order (Buy 2 get your 3rd free):");
@@ -26,7 +31,7 @@ namespace PierresBakery.Models
       newBread.BreadCostCalc();
       newPastry.PastryCostCalc();
       int total = (newBread.BreadCost + newPastry.PastryCost);
-      Console.WriteLine($"Cost of bread loaves: ${newBread.BreadCost}");
+      Console.WriteLine($"Cost of {newBread.BreadType} loaves: ${newBread.BreadCost}");
       Console.WriteLine($"Cost of pastries: ${newPastry.PastryCost}");
       Console.WriteLine($"Order Total: ${total}");
       Console.WriteLine("Would you like to make another order? (Y/N)");
