@@ -31,7 +31,7 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void PastryCostCalc_EachPastryCosts5_10()
+    public void PastryCostCalc_EachPastryCosts2_4()
     {
       Pastry newPastryOrder = new Pastry("2");
       newPastryOrder.IsPastryOrderValid();
@@ -40,7 +40,7 @@ namespace PierresBakery.Tests
     }
 
     // [TestMethod]
-    // public void PastryCostCalc_EveryThirdPastryCosts0_10()
+    // public void PastryCostCalc_EveryThirdPastryCosts1_5()
     // {
     //   Pastry newPastryOrder = new Pastry("3");
     //   newPastryOrder.IsPastryOrderValid();

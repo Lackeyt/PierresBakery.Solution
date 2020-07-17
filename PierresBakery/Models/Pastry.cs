@@ -24,7 +24,7 @@ namespace PierresBakery.Models
 
     public void PastryCostCalc()
     {
-      //PastryCost = PastryOrderInt * 2;
+      PastryCost = PastryOrderInt * 2;
       // int count = 1;
       // while(count <= PastryOrderInt)
       // {
