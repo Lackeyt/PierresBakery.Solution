@@ -6,7 +6,10 @@ namespace PierresBakery.Models
   {
     static void Main()
     {
-      Console.WriteLine("Welcome to Pierre's Bakery");
+      Console.BackgroundColor = ConsoleColor.Blue;
+      Console.ForegroundColor = ConsoleColor.Black;
+      string title = "Welcome to Pierre's Bakery";
+      Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (title.Length / 2)) + "}", title).PadRight(Console.WindowWidth));
       Console.WriteLine("What type of bread would you like to add to your order? (white ($5), sourdough ($8), baguette ($3), italian ($7))");
       string breadType = Console.ReadLine();
       Console.WriteLine("How many loaves of bread would you like? (Buy 2 get your 3rd free)");
@@ -44,6 +47,7 @@ namespace PierresBakery.Models
       {
         Console.WriteLine("Thank you for visiting Pierre's Bakery! Have a nice day.");
       }
+      Console.ResetColor();
     }
   }
 }
