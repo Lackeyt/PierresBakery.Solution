@@ -26,6 +26,8 @@ namespace PierresBakery.Models
           return true;
         case "sourdough":
           return true;
+        case "baguette":
+          return true;
         default:
           return false;
       }
