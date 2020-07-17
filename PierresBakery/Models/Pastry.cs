@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace PierresBakery.Models
 {
   public class Pastry
@@ -8,6 +5,7 @@ namespace PierresBakery.Models
     public string PastryOrderString { get; set; }
     public int PastryOrderInt;
     public int PastryCost { get; set; }
+    public string PastryErrorOutput { get; set; }
 
     public Pastry(string UserPastryOrder)
     {
@@ -24,19 +22,26 @@ namespace PierresBakery.Models
 
     public void PastryCostCalc()
     {
-      int count = 1;
-      while(count <= PastryOrderInt)
+      if (IsPastryOrderValid())
       {
-        if (count % 3 != 0)
+        int count = 1;
+        while(count <= PastryOrderInt)
         {
-          PastryCost += 2;
-          count += 1;
+          if (count % 3 != 0)
+          {
+            PastryCost += 2;
+            count += 1;
+          }
+          else
+          {
+            PastryCost += 1;
+            count += 1;
+          }
         }
-        else
-        {
-          PastryCost += 1;
-          count += 1;
-        }
+      }
+      else
+      {
+        PastryErrorOutput = "-invalid order- Please enter a whole number of pastries to order:";
       }
     }
   }
