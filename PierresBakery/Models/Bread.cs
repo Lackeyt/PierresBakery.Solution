@@ -18,6 +18,11 @@ namespace PierresBakery.Models
       BreadCost = 0;
     }
 
+    public bool isBreadTypeValid()
+    {
+      return false;
+    }
+
     public bool IsBreadOrderNumberValid()
     {
       bool isInt = int.TryParse(BreadOrderNumberString, out BreadOrderInt);

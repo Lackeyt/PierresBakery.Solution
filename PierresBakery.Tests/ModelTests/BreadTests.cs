@@ -14,6 +14,13 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
+    public void IsBreadTypeValid_ReturnsTrueForValidBreadType_True()
+    {
+      Bread newBreadOrder = new Bread("white", "test");
+      Assert.AreEqual(true, newBreadOrder.isBreadTypeValid());
+    }
+
+    [TestMethod]
     public void IsBreadOrderValid_ReturnsTrueForValidIntegerBreadOrder_True()
     {
       Bread newBreadOrder = new Bread("test", "5");
@@ -53,14 +60,5 @@ namespace PierresBakery.Tests
       newBreadOrder.BreadCostCalc();
       Assert.AreEqual(60, newBreadOrder.BreadCost);
     }
-
-    // [TestMethod]
-    // public void BreadCostCalc_Every21stBreadReduceCostBy10_60()
-    // {
-    //   Bread newBreadOrder = new Bread("test", "21");
-    //   newBreadOrder.IsBreadOrderNumberValid();
-    //   newBreadOrder.BreadCostCalc();
-    //   Assert.AreEqual(60, newBreadOrder.BreadCost);
-    // }
   }
 }
