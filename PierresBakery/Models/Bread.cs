@@ -24,6 +24,8 @@ namespace PierresBakery.Models
       {
         case "white":
           return true;
+        case "sourdough":
+          return true;
         default:
           return false;
       }
