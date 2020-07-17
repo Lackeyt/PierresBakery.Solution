@@ -22,26 +22,19 @@ namespace PierresBakery.Models
 
     public void PastryCostCalc()
     {
-      if (IsPastryOrderValid())
+      int count = 1;
+      while(count <= PastryOrderInt)
       {
-        int count = 1;
-        while(count <= PastryOrderInt)
+        if (count % 3 != 0)
         {
-          if (count % 3 != 0)
-          {
-            PastryCost += 2;
-            count += 1;
-          }
-          else
-          {
-            PastryCost += 1;
-            count += 1;
-          }
+          PastryCost += 2;
+          count += 1;
         }
-      }
-      else
-      {
-        PastryErrorOutput = "-invalid order- Please enter a whole number of pastries to order:";
+        else
+        {
+          PastryCost += 1;
+          count += 1;
+        }
       }
     }
   }

@@ -23,27 +23,19 @@ namespace PierresBakery.Models
 
     public void BreadCostCalc()
     {
-      if (IsBreadOrderValid())
+      int count = 1;
+      while(count <= BreadOrderInt)
       {
-        int count = 1;
-        while(count <= BreadOrderInt)
+        if (count % 3 != 0)
         {
-          if (count % 3 != 0)
-          {
-            BreadCost += 5;
-            count += 1;
-          }
-          else
-          {
-            count += 1;
-          }
+          BreadCost += 5;
+          count += 1;
+        }
+        else
+        {
+          count += 1;
         }
       }
-      else
-      {
-        BreadErrorOutput = "-invalid order- Please enter a whole number of bread loafs to order:";
-      }
-      
     }
   }
 }
