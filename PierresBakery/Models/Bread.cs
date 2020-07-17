@@ -20,7 +20,13 @@ namespace PierresBakery.Models
 
     public bool isBreadTypeValid()
     {
-      return false;
+      // switch (BreadType)
+      // {
+      //   case "white":
+      //     return true;
+      //   default:
+          return false;
+
     }
 
     public bool IsBreadOrderNumberValid()

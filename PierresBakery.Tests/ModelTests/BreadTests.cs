@@ -14,7 +14,7 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void IsBreadTypeValid_ReturnsTrueForValidBreadType_True()
+    public void IsBreadTypeValid_IsWhiteBreadValid_True()
     {
       Bread newBreadOrder = new Bread("white", "test");
       Assert.AreEqual(true, newBreadOrder.isBreadTypeValid());
