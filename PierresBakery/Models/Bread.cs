@@ -24,7 +24,7 @@ namespace PierresBakery.Models
 
     public void BreadCostCalc()
     {
-
+      BreadCost += BreadOrderInt * 5;
     }
   }
 }
