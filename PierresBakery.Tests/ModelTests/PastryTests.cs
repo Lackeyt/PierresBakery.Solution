@@ -45,5 +45,14 @@ namespace PierresBakery.Tests
       newPastryOrder.PastryCostCalc();
       Assert.AreEqual(5, newPastryOrder.PastryCost);
     }
+
+    [TestMethod]
+    public void PastryCostCalc_Every12thPastryCostsReducedBy2_18()
+    {
+      Pastry newPastryOrder = new Pastry("12");
+      newPastryOrder.IsPastryOrderValid();
+      newPastryOrder.PastryCostCalc();
+      Assert.AreEqual(18, newPastryOrder.PastryCost);
+    }
   }
 }
