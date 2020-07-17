@@ -48,7 +48,7 @@ namespace PierresBakery.Models
       {
         if (count % 21 == 0)
         {
-          BreadCost -= 10;
+          BreadCost -= (_breadPrice[BreadType] * 2);
           count += 1;
         }
         else if (count % 3 == 0)
@@ -57,7 +57,7 @@ namespace PierresBakery.Models
         }
         else
         {
-          BreadCost += 5;
+          BreadCost += _breadPrice[BreadType];
           count += 1;
         }
       }
